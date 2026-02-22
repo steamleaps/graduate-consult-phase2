@@ -32,8 +32,8 @@ export default function OrganisationalInquiryForm({ onSubmitSuccess }: Organisat
     setSubmitStatus('idle');
 
     try {
-      // Use the same Google Apps Script endpoint as contact form
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyLWP-u7FkXsV9uHc-L19i1lgbH8umbSVfm175NW4XPyPC-4YRjsywKB152tQB1ewvNTA/exec';
+      // Google Apps Script Web App URL - Contact & Inquiry Handler
+      const scriptURL = import.meta.env.VITE_CONTACT_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbz3n-y-KfNw4Ya_B2r7qMPgILDc90sVWSnHv_BowbILdqGUShNI3MgEtb1eeyQNFUj1zA/exec';
       
       // Format the message to include all organizational details
       const formattedMessage = `

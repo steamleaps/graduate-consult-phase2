@@ -28,7 +28,7 @@ export default function PaystackPayment({
     reference: `GC-${new Date().getTime()}`, // Unique transaction reference
     email: email,
     amount: Math.round(amount * 100), // Paystack expects amount in pesewas (kobo for Nigeria)
-    publicKey: 'pk_test_89e61fadd249bbab5f508110482254a193037114', // Your Paystack test public key
+    publicKey: import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || 'pk_test_89e61fadd249bbab5f508110482254a193037114', // Your Paystack public key
     currency: 'GHS', // Ghana Cedis
     metadata: {
       custom_fields: [

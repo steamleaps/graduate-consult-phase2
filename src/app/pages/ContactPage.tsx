@@ -40,8 +40,8 @@ export default function ContactPage() {
     setSubmitStatus('idle');
 
     try {
-      // Replace with your Google Apps Script Web App URL
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyLWP-u7FkXsV9uHc-L19i1lgbH8umbSVfm175NW4XPyPC-4YRjsywKB152tQB1ewvNTA/exec';
+      // Google Apps Script Web App URL - Contact & Inquiry Handler
+      const scriptURL = import.meta.env.VITE_CONTACT_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbz3n-y-KfNw4Ya_B2r7qMPgILDc90sVWSnHv_BowbILdqGUShNI3MgEtb1eeyQNFUj1zA/exec';
       
       const response = await fetch(scriptURL, {
         method: 'POST',

@@ -111,7 +111,7 @@ export default function BookingPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     
     // Fire the API call in the background (non-blocking)
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbwDQSl20G4Y1VRB3DG9tVaFOc2RRi_JPC8Ho2aIYMyx01s3lf2RiXZKKsId0ZIjIGnOHA/exec';
+    const scriptUrl = import.meta.env.VITE_BOOKING_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbwDQSl20G4Y1VRB3DG9tVaFOc2RRi_JPC8Ho2aIYMyx01s3lf2RiXZKKsId0ZIjIGnOHA/exec';
     
     // Don't await - let it run in background
     fetch(scriptUrl, {
